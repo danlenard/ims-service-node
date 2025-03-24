@@ -33,10 +33,16 @@ PORT=5000
 
 ## **Import Database in MySQL Workbench**  
 1. Open **MySQL Workbench**.  
-2. Go to **Server** → **Data Import**.  
-3. Select **Import from Self-Contained File** and choose the `ims_db.sql` file.  
-4. Select your target database (`ims_phone`).  
-5. Click **Start Import** to load the schema and data.  
+2. **Create the database**:  
+   - Go to the **SQL Editor** and run:  
+     ```sql
+     CREATE DATABASE ims_phone;
+     ```
+   - Select the newly created `ims_phone` database.  
+3. Go to **Server** → **Data Import**.  
+4. Select **Import from Dump Project Folder** and choose the `ims_db_dump` folder.  
+5. Select your target database (`ims_phone`).  
+6. Click **Start Import** to load all SQL files into the database. 
 
 ## **Built With**  
 - **Node.js** – JavaScript runtime  
